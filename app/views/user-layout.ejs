@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Docus</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800">
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Oswald:400,300,700">
+        <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/css/theme.css">
+        <link rel="stylesheet" type="text/css" href="/css/toastr.css">
+        <link rel="stylesheet" type="text/css" href="/css/style.css" media="all">
+        
+        <script type="text/javascript" src="/js/jquery-1.12.2.min.js"></script>
+        <script type="text/javascript" src="/js/bootstrap.js"></script>
+        <script type="text/javascript" src="/js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="/js/toastr.js"></script>
+        <script type="text/javascript">
+            toastr.options.newestOnTop = true;
+            toastr.options.closeButton = true;
+            toastr.options.positionClass = "toast-bottom-right";
+        </script>
+    </head>
+    <body>
+        <% include templates/user-header.html.ejs %>
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10" style="padding-top: 15px;">
+                <%-body%>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </body>
+</html>

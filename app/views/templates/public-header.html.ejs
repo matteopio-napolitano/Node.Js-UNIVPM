@@ -1,0 +1,68 @@
+<!----start-container----->
+<div class="header-bg" id="home">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="logo">
+                    <img src="/images/docus.png" class="img-logo" alt="Docus Logo">
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="h_right">
+                    <div class="left">
+                        <ul class="menu list-unstyled">
+                            <li class="<%= action == 'index' ? 'active' : '' %>"><a href="/">Home</a></li>
+                            <li class="<%= action == 'support' ? 'active' : '' %>"><a href="/support">Support</a></li>
+                            <% if (isLoggedIn) { %>
+                            <li><a href="/user">Dashboard</a></li>
+                            <li><a href="/logout">LOGOUT</a></li>
+                            <% } %>
+                        </ul>
+                    </div>
+                    <% if (!isLoggedIn) { %>
+                    <div class="right">
+                        <ul class="menu list-unstyled">
+                            <li class="login">
+                                <div class="log_box">
+                                    <div id="loginContainer">
+                                        <a href="#" id="loginButton" class=""><span>LOGIN</span></a>
+                                        <div id="loginBox" style="display: none;">
+                                            <form id="loginForm" action="/login" method="POST" >
+                                                <fieldset id="body">
+                                                    <input type="text" name="email" id="email" placeholder="email">
+                                                    <input type="password" name="password" class="textbox" placeholder="password">
+                                                    <input type="submit" id="log" value="Sign in">
+                                                    <label for="checkbox"><i><a href="/account">&bullet;&nbsp;&nbsp;&nbsp;Create account</a></i></label>
+                                                    <br>
+                                                    <label for="checkbox"><i><a href="javascript:alert('Our monkeys are working hard to find your password :)');">&bullet;&nbsp;&nbsp;&nbsp;Lost Password?</a></i></label>
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <!-- end_login_box -->
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- start login_box -->
+                    <% } %>
+
+                    <!-- start smart_nav * -->
+                    <nav class="nav">
+                        <ul class="nav-list">
+                            <li class="nav-item"><a href="#home">Home</a></li>
+                            <li class="nav-item"><a href="#features" class="scroll">Features</a></li>
+                            <li class="nav-item"><a href="#prices" class="scroll">Prices</a></li>
+                            <li class="nav-item"><a href="#faq" class="scroll">Faq</a></li>
+                            <li class="nav-item"><a href="#support" class="scroll">Support</a></li>
+                        </ul>
+
+                        <div class="nav-mobile"></div></nav>
+                    <!-- end smart_nav * -->
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

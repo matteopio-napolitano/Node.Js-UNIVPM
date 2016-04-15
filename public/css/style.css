@@ -1,0 +1,55 @@
+.img-logo {
+    width: 185px;
+    height: 40px;
+}
+
+.row {
+    margin: 0px;
+}
+
+.contact input[type="password"] {
+    padding: 14px;
+    width: 100%;
+    margin: 6% 2% 0 0;
+    background: #4B5456;
+    outline: none;
+    color: #fff;
+    font-size: 0.92355em;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    font-family: 'Open Sans', sans-serif;
+    border: 1px solid #4B5456;
+    -webkit-appearance: none;
+}
+
+.contact input[type="password"]:nth-child(2) {
+    margin-right: 0em;
+}
+
+.contact button[type="submit"]{
+    padding: 14px 20px;
+    background: #191F21;
+    outline: none;
+    color: #fff;
+    font-size: 0.82355em;
+    font-style: normal;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    font-family: 'Open Sans', sans-serif;
+    border: none;
+    -webkit-appearance: none;
+    margin-top: 4%;
+    cursor: pointer;
+    transition:0.5s all;
+    -webkit-transition:0.5s all;
+    -moz-transition:0.5s all;
+    -o-transition:0.5s all;
+}
+.contact button[type="submit"]:hover{
+    background: #3889CF;
+    color: #fff;
+}

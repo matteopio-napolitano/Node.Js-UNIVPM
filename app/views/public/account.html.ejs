@@ -1,0 +1,33 @@
+<div class="contact s6" id="support">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="contact-left">
+                    <h3>Create your account!</h3>
+                    <p class="style">Simple and easy, you are just one step away from your Docus account!</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="contact-right">
+                    <div class="form">
+                        <% if (status && status != null && status == -1) { %>
+                        <p class="bg-danger" style="padding: 5px; border-radius: 4px;"><%= message %></p>
+                        <% } else if (status && status != null && status == 1) { %>
+                        <p class="bg-success" style="padding: 5px; border-radius: 4px;"><%= message %></p>
+                        <% } %>
+                        <form method="post" action="/register">
+                            <input type="text" class="textbox" name="fname" placeholder="First Name" required>
+                            <input type="text" class="textbox" name="lname" placeholder="Last Name" required>
+                            <input type="text" class="textbox" name="email" placeholder="E-mail address" required>
+                            <input type="password" class="textbox" name="password" placeholder="Docus password" required>
+                            <input type="password" class="textbox" name="r_password" placeholder="Repeat Docus password" required>
+                            <button type="submit" class="contact">Signup</button>
+                            <div class="clearfix" style="margin-bottom: 180px;"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>

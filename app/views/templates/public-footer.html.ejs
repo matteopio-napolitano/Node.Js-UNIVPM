@@ -1,0 +1,53 @@
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="copy-right">
+                    <p>&#169Copyright 2016 All Rights Reserved  Template <a href="http://w3layouts.com/">  w3layouts.com</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/js/jquery-1.12.2.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.js"></script>
+<script type="text/javascript" src="/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/js/toastr.js"></script>
+<script type="text/javascript" src="/js/responsive.menu.js"></script>
+<script type="text/javascript" src="/js/css3-mediaqueries.js"></script>
+<script type="text/javascript" src="/js/fwslider.js"></script>
+<script type="text/javascript" src="/js/login.js"></script>
+<script type="text/javascript" src="/js/modernizr.custom.js"></script>
+<script type="text/javascript" src="/js/move-top.js"></script>
+<script type="text/javascript" src="/js/easing.js"></script>
+<script type="text/javascript">
+    toastr.options.newestOnTop = true;
+    toastr.options.closeButton = true;
+    toastr.options.positionClass = "toast-top-right";
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var defaults = {
+            containerID: 'toTop', // fading element id
+            containerHoverID: 'toTopHover', // fading element hover id
+            scrollSpeed: 1200,
+            easingType: 'linear'
+        };
+
+        $().UItoTop({easingType: 'easeOutQuart'});
+
+        $(".scroll").click(function (event) {
+            event.preventDefault();
+            $('html,body').animate({
+                scrollTop: $(this.hash).offset().top
+            }, 1200);
+        });
+        
+        <% if (loginError && loginError !== null) { %>
+        toastr.error('Unable to login! Please check your credentials and try again', 'Error!');
+        <% } %>
+    });
+</script>
+
+<a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
