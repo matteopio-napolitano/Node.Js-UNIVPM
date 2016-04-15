@@ -8,8 +8,11 @@
     "connect-powered-by": "0.1.x",
     "ejs": "0.8.x",
     "express": "3.x.x",
+    "express-ejs-layouts": "^2.1.0",
     "locomotive": "0.4.x",
     "mysql": "^2.10.2",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
     "sequelize": "^3.21.0"
   },
   "scripts": {
