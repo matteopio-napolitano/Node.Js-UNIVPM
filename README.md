@@ -19,9 +19,16 @@ Scaricare il pacchetto compresso di questo repository e decomprimerlo, poi raggi
 
 	$ cd /your/path/to/project/
 
-Infine eseguire le seguenti istruzioni per installare tutte le dipendenze necessarie al corretto funzionamento della web application ed avviare la piattaforma
+Installare tutte le dipendenze necessarie al corretto funzionamento della web application
 
 	$ npm install
+
+Collegarsi al database MySQL locale (se non installato è necessario scaricarlo e configurarlo) ed effettuare le seguenti operazioni:
+- creare una nuova utenza per l'accesso a mysql specificando come username 'docus' e come password 'docus' ed assegnare tutti i permessi
+- creare un database con nome 'docus' e codifica caratteri utf8-general-ci
+
+Infine, per avviare la piattaforma, posizionarsi nella cartella di progetto ed eseguire il comando
+
 	$ lcm server
 
 Aprire il browser e collegarsi all'indirizzo [localhost:3000](http://localhost:3000).
